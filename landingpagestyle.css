@@ -52,3 +52,30 @@ header {
 .pheader:hover{
     color: brown;
 }
+
+main {
+    padding: 20px;
+    background-color: antiquewhite;
+}
+
+.khat{
+    color: #1b2841;
+    line-height: 30;
+}
+
+.marticle {
+    font-size: 40px;
+    direction: rtl;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.article-box {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    direction: rtl;
+}
