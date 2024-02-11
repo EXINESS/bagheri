@@ -28,3 +28,27 @@ nav a {
     color: #fff;
     text-decoration: none;
 }
+
+header {
+    background-image: url(mo.jpg);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 250px 0;
+    text-shadow: 2px 2px 10px #222;
+}
+
+.pheader {
+    font-size: 64px;
+    box-shadow: #131212;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.pheader:hover{
+    color: brown;
+}
