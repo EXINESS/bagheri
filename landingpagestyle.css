@@ -79,3 +79,68 @@ main {
     border-radius: 8px;
     direction: rtl;
 }
+
+:root {
+    --background: #f8f8ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body1 {
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.gallery001 {
+    display: flex;
+    gap: 1rem;
+    max-width: 80rem;
+}
+
+.card01{
+    position: relative;
+    left: 0px;
+    width: 6rem;
+    border-radius: 1.2rem;
+    height: 20rem;
+    overflow: hidden;
+    background-color: var(--background);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    flex: 0.25;
+}
+
+.card01 img{
+    position: relative;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.card01:hover{
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.card01:nth-child(1) img {
+    left: -8rem;
+}
+
+.card01:nth-child(2) img {
+    left: -6rem;
+}
+
+.card01:nth-child(3) img {
+    left: -14rem;
+}
+
+.card01:nth-child(4) img {
+    left: -8rem;
+}
