@@ -101,6 +101,7 @@ main {
     display: flex;
     gap: 1rem;
     max-width: 80rem;
+    display: flex;
 }
 
 .card01{
@@ -120,6 +121,8 @@ main {
     position: relative;
     height: 20rem;
     object-fit: cover;
+   inline-size: 100%;
+    block-size: 100%;
 }
 
 .card01:hover{
