@@ -1,9 +1,10 @@
 :root {
-    --nav-background: hsl(214.521, 50%, 28%);
-    --nav-color: hsl(0, 3%, 7%);
-    --heading-hover-color: hsl(189, 19%, 68%);
-    --card-background:hsl(189, 16%, 47%);
-    --caed-color: hsl(300, 71%, 28%)
+    --nav-background: hsl(219, 13%, 22%);
+    --foter-background: hsl(219, 13%, 22%);
+    --nav-color: hsl(0, 0%, 100%);
+    --font-color: hsl(0, 1%, 5%);
+    --heading-hover-color: hsl(183, 26%, 57%);
+    --card-background:hsl(183, 26%, 57%);
 }
 
 html{
@@ -19,15 +20,16 @@ html{
 
 h1, h2, h3, p, a{
     font-family: Arial, sans-serif;
+    color: var(--font-color);
 }
 
 ul {
     list-style-type: none;
 }
 
-a {
+h1, a {
     text-decoration: none;
-    color: hsl(0, 0%, 100%);
+    color: var(--nav-color);
 }
 
 header {
@@ -66,7 +68,7 @@ main{
 
     padding: 2rem;
 
-    background-color: hsl(27, 29%, 87%);
+    background-color: hsl(0, 0%, 93%);
 }
 
 main .article{
@@ -78,6 +80,10 @@ main .article{
 main .article hr{
     color: hsl(219, 41%, 18%);
     line-height: 30rem
+}
+
+main .article h2{
+    font-size: 2.5rem;
 }
 
 main .article div{
@@ -154,20 +160,19 @@ main .article article{
 }
 
 footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-        bottom: 0;
-        width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
 }
 
 .professional-footer {
-        background-color: #1b2841;
-        color: #fff;
+        background-color: var(--foter-background);
+        color: hsl(0, 0%, 100%);
         padding: 20px 0;
 }
 
@@ -184,17 +189,9 @@ footer {
 
 
 .footer-section h3 {
-        color: hsl(268, 48%, 62%);
-
+        color:hsl(183, 26%, 57%);
 }
 
 .footer-section p {
-        color: hsl(0, 0%, 87%);
-
-}
-
-.footer-bottom {
-        background-color: hsl(0, 0%, 13%);
-        padding: 10rem 0;
-        text-align: center;
+        color: hsl(0, 0%, 100%);
 }
