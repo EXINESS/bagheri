@@ -1,8 +1,9 @@
 :root {
     --nav-background: hsl(214.521, 50%, 28%);
     --nav-color: hsl(0, 3%, 7%);
-    --heading-hover-color: hsl(40, 30%, 20%);
-    /* --background: #f8f8ff; */
+    --heading-hover-color: hsl(189, 19%, 68%);
+    --card-background:hsl(189, 16%, 47%);
+    --caed-color: hsl(300, 71%, 28%)
 }
 
 html{
@@ -36,7 +37,7 @@ header {
 
     background-color: var(--nav-background);
 
-    padding:0.4rem 0.8rem;
+    padding:1.5rem 10rem;
 
     text-shadow:2rem 2rem 10rem hsl(0, 0%, 13%) ;
 }
@@ -44,150 +45,156 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
+    gap: 1.5rem;
 
     color: var(--nav-color);
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 header h1:hover {
     color: var(--heading-hover-color);
 }
 
-    main {
-        padding: 2rem;
-        background-color: hsl(27, 29%, 87%);
-    }
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
-    .article-line {
-        color: hsl(219, 41%, 18%);
-        line-height: 30rem;
-    }
+    padding: 2rem;
 
-    .text-article {
-        font-size: 40rem;
-        padding: 20rem;
-        margin: 20rem auto;
-    }
+    background-color: hsl(27, 29%, 87%);
+}
 
-    .article-box {
-        max-width: 800rem;
-        margin: 20rem auto;
-        background-color: hsl(220, 0%, 100%);
-        box-shadow: 0 0 10rem hsla(219, 16%, 12%, 0.1%);
-        padding: 20rem;
-        border-radius: 8rem;
-    }
+main .article{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
 
-    .card-gallery {
-        background-color: var(--background);
+main .article hr{
+    color: hsl(219, 41%, 18%);
+    line-height: 30rem
+}
+
+main .article div{
+    display: flex;
+    gap: 2rem;
+}
+
+main .article article{
+    padding: 1.2rem;
+
+    background-color: hsl(220, 0%, 100%);
+
+    border-radius: 0.8rem;
+
+    font-size: 2rem;
+
+    box-shadow: 0 0 1rem hsla(219, 16%, 12%, 0.1%);
+}
+
+.card-gallery {
         display: grid;
         place-items: center;
-        height: 100vh;
-    }
 
-    .first-card-gallery {
+        background-color: var(--card-background);
+
+        block-size: 100vh;
+}
+
+.first-card-gallery {
         display: flex;
-        gap: 1.05rem;
-        max-width: 90rem;
-    }
+        gap: 1rem;
 
-    .card-style {
+        max-inline-size: 90rem;
+}
+
+.card-style {
         position: relative;
-        left: 0;
-        width: 6rem;
+        inset-inline-start: 0;
         border-radius: 1.2rem;
-        height: 20rem;
+        block-size: 60vh;
         overflow: hidden;
-        background-color: var(--background);
         transition: 0.4s ease-in-out;
         box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
         flex: 0.25;
-    }
+}
 
-    .card-style img {
+.card-style img {
         object-fit: cover;
         inline-size: 100%;
         block-size: 100%;
+}
 
-    }
-
-    .card-style:hover {
+.card-style:hover {
         flex: 2;
         font-weight: bold;
         cursor: pointer;
         border-radius: 1rem;
-    }
+}
 
-    .card-style:nth-child(1) img {
+.card-style:nth-child(1) img {
         left: -10rem;
-    }
+}
 
-    .card-style:nth-child(2) img {
+.card-style:nth-child(2) img {
         left: -6rem;
-    }
+}
 
-    .card-style:nth-child(3) img {
+.card-style:nth-child(3) img {
         left: -14rem;
-    }
+}
 
-    .card-style:nth-child(4) img {
+.card-style:nth-child(4) img {
         left: -8rem;
-    }
+}
 
-    footer {
+footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #333;
         color: #fff;
         text-align: center;
         padding: 1em;
         bottom: 0;
         width: 100%;
-    }
+}
 
-    .professional-footer {
+.professional-footer {
         background-color: #1b2841;
         color: #fff;
         padding: 20px 0;
-    }
+}
 
-    .footer-content {
+.footer-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         max-width: 1200px;
-        margin: 0 auto;
-    }
+}
 
-    .footer-section {
+.footer-section {
         width: 300px;
-        margin-bottom: 20px;
-    }
+}
 
-    .footer-section h3 {
+
+.footer-section h3 {
         color: hsl(268, 48%, 62%);
-    }
 
-    .footer-section p {
+}
+
+.footer-section p {
         color: hsl(0, 0%, 87%);
-    }
 
-    li ul {
-        list-style-type: none;
-        padding: 0;
-    }
+}
 
-    a{
-    color: hsl(0, 0%, 100%);
-    text-decoration: none;
-    }
-
-    .footer-bottom {
+.footer-bottom {
         background-color: hsl(0, 0%, 13%);
         padding: 10rem 0;
         text-align: center;
-    }
 }
