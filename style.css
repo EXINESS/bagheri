@@ -1,13 +1,15 @@
+/* general */
+
 :root {
-    --nav-background: hsl(219, 13%, 22%);
-    --foter-background: hsl(219, 13%, 22%);
-    --nav-color: hsl(0, 0%, 100%);
-    --font-color: hsl(0, 1%, 5%);
-    --heading-hover-color: hsl(183, 26%, 57%);
-    --card-background:hsl(183, 26%, 57%);
+    /* color */
+    --full-white: hsl(0, 0%, 100%);
+    --light-blue: hsl(183, 26%, 57%);
+
+    /* font */
+    --font:  Arial, sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
@@ -18,38 +20,47 @@ html{
     padding: 0;
 }
 
-h1, h2, h3, p, a{
-    font-family: Arial, sans-serif;
-    color: var(--font-color);
+h1, h2, h3, p, a {
+    font-family: var(--font);
+}
+
+h2, h3, p, a {
+    color: hsl(0, 1%, 5%);
 }
 
 ul {
     list-style-type: none;
 }
 
-h1, a {
+a {
     text-decoration: none;
-    color: var(--nav-color);
 }
+
+h1, a {
+    color: var(--full-white);
+}
+
+/* header */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--nav-background);
+    background-color: var(--light-blue);
 
-    padding:1.5rem 10rem;
+    padding: 1.5rem 1rem;
 
-    text-shadow:2rem 2rem 10rem hsl(0, 0%, 13%) ;
+    text-shadow: 0.2rem 0.2rem 1rem hsl(0, 0%, 13%);
 }
+
 header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
 
-    color: var(--nav-color);
+    color: var(--light-blue);
     font-size: 2rem;
 }
 
@@ -58,40 +69,39 @@ header h1 {
 }
 
 header h1:hover {
-    color: var(--heading-hover-color);
+    color: var(--grey-blue);
 }
 
-main{
+/* main */
+
+main {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 
-    padding: 2rem;
-
     background-color: hsl(0, 0%, 93%);
 }
 
-main .article{
+/* aritcle */
+
+main .article {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+
+    padding: 2rem;
 }
 
-main .article hr{
-    color: hsl(219, 41%, 18%);
-    line-height: 30rem
-}
-
-main .article h2{
+main .article h2 {
     font-size: 2.5rem;
 }
 
-main .article div{
+main .article div {
     display: flex;
     gap: 2rem;
 }
 
-main .article article{
+main .article article {
     padding: 1.2rem;
 
     background-color: hsl(220, 0%, 100%);
@@ -103,95 +113,91 @@ main .article article{
     box-shadow: 0 0 1rem hsla(219, 16%, 12%, 0.1%);
 }
 
-.card-gallery {
-        display: grid;
-        place-items: center;
+/* gallery */
 
-        background-color: var(--card-background);
+main .gallery {
+    display: grid;
+    place-items: center;
 
-        block-size: 100vh;
+    background-color: var(--light-blue);
+
+    block-size: 100vh;
 }
 
-.first-card-gallery {
-        display: flex;
-        gap: 1rem;
+main .gallery div {
+    display: flex;
+    gap: 1rem;
 
-        max-inline-size: 90rem;
+    max-inline-size: 90rem;
 }
 
-.card-style {
-        position: relative;
-        inset-inline-start: 0;
-        border-radius: 1.2rem;
-        block-size: 60vh;
-        overflow: hidden;
-        transition: 0.4s ease-in-out;
-        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
-        flex: 0.25;
+main .gallery div figure {
+    flex: 0.25;
+
+    block-size: 60vh;
+
+    border-radius: 1.2rem;
+
+    overflow: hidden;
+
+    transition: 0.4s ease-in-out;
+
+    box-shadow: 0 0.5rem 1.2rem hsla(0, 0%, 0%, 0.3);
+    
+    cursor: pointer;
 }
 
-.card-style img {
-        object-fit: cover;
-        inline-size: 100%;
-        block-size: 100%;
+main .gallery div figure:hover {
+    flex: 2;
 }
 
-.card-style:hover {
-        flex: 2;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 1rem;
+main .gallery div figure img {
+    inline-size: 100%;
+    block-size: 100%;
+
+    object-fit: cover;
 }
 
-.card-style:nth-child(1) img {
-        left: -10rem;
-}
-
-.card-style:nth-child(2) img {
-        left: -6rem;
-}
-
-.card-style:nth-child(3) img {
-        left: -14rem;
-}
-
-.card-style:nth-child(4) img {
-        left: -8rem;
-}
+/* footer */
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding: 1rem;
+
+    background-color: hsl(219, 13%, 22%);
+
     font-size: 2rem;
-    text-align: center;
-    padding: 1em;
-    bottom: 0;
-    width: 100%;
 }
 
-.professional-footer {
-        background-color: var(--foter-background);
-        color: hsl(0, 0%, 100%);
-        padding: 20px 0;
+footer .content {
+    display: flex;
+    justify-content: space-evenly;
+
+    inline-size: 100%;
 }
 
-.footer-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        max-width: 1200px;
+footer .content>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 2rem;
 }
 
-.footer-section {
-        width: 35rem;
+footer .content div h3 {
+    color: var(--light-blue);
 }
 
-
-.footer-section h3 {
-        color:hsl(183, 26%, 57%);
+footer .content div p {
+    color: var(--full-white);
 }
 
-.footer-section p {
-        color: hsl(0, 0%, 100%);
+footer .content div ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
