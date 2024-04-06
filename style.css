@@ -1,0 +1,203 @@
+/* general */
+
+:root {
+    /* color */
+    --full-white: hsl(0, 0%, 100%);
+    --light-blue: hsl(183, 26%, 57%);
+
+    /* font */
+    --font:  Arial, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, p, a {
+    font-family: var(--font);
+}
+
+h2, h3, p, a {
+    color: hsl(0, 1%, 5%);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, a {
+    color: var(--full-white);
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--light-blue);
+
+    padding: 1.5rem 1rem;
+
+    text-shadow: 0.2rem 0.2rem 1rem hsl(0, 0%, 13%);
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    color: var(--light-blue);
+    font-size: 2rem;
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+header h1:hover {
+    color: var(--grey-blue);
+}
+
+/* main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    background-color: hsl(0, 0%, 93%);
+}
+
+/* aritcle */
+
+main .article {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    padding: 2rem;
+}
+
+main .article h2 {
+    font-size: 2.5rem;
+}
+
+main .article div {
+    display: flex;
+    gap: 2rem;
+}
+
+main .article article {
+    padding: 1.2rem;
+
+    background-color: hsl(220, 0%, 100%);
+
+    border-radius: 0.8rem;
+
+    font-size: 2rem;
+
+    box-shadow: 0 0 1rem hsla(219, 16%, 12%, 0.1%);
+}
+
+/* gallery */
+
+main .gallery {
+    display: grid;
+    place-items: center;
+
+    background-color: var(--light-blue);
+
+    block-size: 100vh;
+}
+
+main .gallery div {
+    display: flex;
+    gap: 1rem;
+
+    max-inline-size: 90rem;
+}
+
+main .gallery div figure {
+    flex: 0.25;
+
+    block-size: 60vh;
+
+    border-radius: 1.2rem;
+
+    overflow: hidden;
+
+    transition: 0.4s ease-in-out;
+
+    box-shadow: 0 0.5rem 1.2rem hsla(0, 0%, 0%, 0.3);
+    
+    cursor: pointer;
+}
+
+main .gallery div figure:hover {
+    flex: 2;
+}
+
+main .gallery div figure img {
+    inline-size: 100%;
+    block-size: 100%;
+
+    object-fit: cover;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background-color: hsl(219, 13%, 22%);
+
+    font-size: 2rem;
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-evenly;
+
+    inline-size: 100%;
+}
+
+footer .content>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem 2rem;
+}
+
+footer .content div h3 {
+    color: var(--light-blue);
+}
+
+footer .content div p {
+    color: var(--full-white);
+}
+
+footer .content div ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
