@@ -24,7 +24,7 @@ h1, h2, h3, p, a {
     font-family: var(--font);
 }
 
-h2, h3, p, a {
+h2, h3, p {
     color: hsl(0, 1%, 5%);
 }
 
